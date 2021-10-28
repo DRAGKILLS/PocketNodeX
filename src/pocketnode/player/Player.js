@@ -54,7 +54,7 @@ const CompoundTag = require("../nbt/tag/CompoundTag");
 const ResourcePack = require("../resourcepacks/ResourcePack");
 const TextFormat = require("../utils/TextFormat");
 const Base64 = require("../utils/Base64");
-
+const Config = require("./utils/Config");
 // const Async = require("../utils/Async");
 
 class Player extends Human{
@@ -129,6 +129,9 @@ class Player extends Human{
 
         this._sessionAdapter = new PlayerSessionAdapter(this);
         this.lastUpdate = this.server.getTick();
+
+	let config = new Config(server._path.data + "pocketnode.json", Config.JSON, {});
+	this.gamemode = config.getNested("server.gamemode");
 
         //Entity.constructor.call(this.level, this.namedtag);
     }
