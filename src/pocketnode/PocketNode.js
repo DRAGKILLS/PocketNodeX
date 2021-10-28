@@ -31,6 +31,10 @@ function PocketNode(paths){
         }
     }
 
+     if(!SFS.fileExists(path.data + "pocketnode.json")){
+        SFS.copy(path.file + "pocketnode/resources/pocketnode.json", path.data + "pocketnode.json");
+     }
+
     let config = new Config(path.data + "pocketnode.json", Config.JSON, {});
     this.localizationManager = new localizationManager(config.getNested("server.language", "en"));
     this.localizationManager.loadLanguages();
