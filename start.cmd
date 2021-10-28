@@ -1,5 +1,5 @@
 @echo off
-title PocketNode: Minecraft Bedrock Edition Server Software
+title PocketNodeX: Minecraft Bedrock Edition Server Software
 set loop=false
 set /A "loops=1"
 
