@@ -130,7 +130,7 @@ class Player extends Human{
         this._sessionAdapter = new PlayerSessionAdapter(this);
         this.lastUpdate = this.server.getTick();
 
-	let config = new Config(server._path.data + "pocketnode.json", Config.JSON, {});
+	let config = new Config(server._paths.data + "pocketnode.json", Config.JSON, {});
 	this.gamemode = config.getNested("server.gamemode");
 
         //Entity.constructor.call(this.level, this.namedtag);
