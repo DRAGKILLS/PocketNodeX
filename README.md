@@ -21,5 +21,5 @@ $ npm i
 
 Afterwards:
 ```
-$ node start
+$ ./start.cmd
 
