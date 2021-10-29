@@ -32,7 +32,12 @@ class BatchPacket extends DataPacket {
 
     _decodePayload(){
         let data = this.readRemaining();
-        this.payload = new BinaryStream(Zlib.unzipSync(data));
+        try {
+            this.payload = new BinaryStream(Zlib.unzipSync(data));
+        }catch(e){
+            this.payload = "";
+            console.log("ERROR CANT DECODE ZLIB BATCH PACKET");
+        }
     }
 
     _encodeHeader(){
