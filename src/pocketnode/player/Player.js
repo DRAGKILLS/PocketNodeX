@@ -54,7 +54,7 @@ const CompoundTag = require("../nbt/tag/CompoundTag");
 const ResourcePack = require("../resourcepacks/ResourcePack");
 const TextFormat = require("../utils/TextFormat");
 const Base64 = require("../utils/Base64");
-const Config = require("./utils/Config");
+const Config = require("../utils/Config");
 // const Async = require("../utils/Async");
 
 class Player extends Human{
