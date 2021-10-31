@@ -18,12 +18,15 @@
   "license": "ISC",
   "dependencies": {
     "adm-zip": "^0.4.7",
+    "collect.js": "^4.29.0",
+    "extends-classes": "^1.0.5",
     "pocketnode-binarystream": "git+https://github.com/PocketNode/PocketNode-BinaryStream.git",
     "pocketnode-language": "git+https://github.com/PocketNode/PocketNode-Language.git",
     "raknet": "git+https://github.com/PocketNode/RakNet.git",
     "time-stamp": "^2.0.0"
   },
   "devDependencies": {
+    "atob": "^2.1.2",
     "jsdoc": "^3.4.0"
   }
 }
